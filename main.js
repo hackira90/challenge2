@@ -46,13 +46,22 @@ Note: please write one or two lines here describing your solution.
 */
 
 function makeComputer(type, color, weight) {
-  // TODO: Your code here
+  var computer = {};
+  var arr = [];
+  computer.type = type;
+  computer.color = color;
+  computer.weight = weight;
+  return computer;
 }
 
+var comptuer1 = makeComputer('MAC', 'red', '3kg');
+var comptuer2 = makeComputer('PC', 'blue', '2kg');
+var computers = [comptuer1, comptuer2];
 // Write a function displayComputer that can be used to display one computer.
 
 function displayComputer(computer) {
-  // TODO: Your code here
+  var str = " ";
+  return str += computer.type + ' ' + computer.color + ' ' + computer.weight;
 }
 
 //=============================================================================
@@ -73,7 +82,9 @@ uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
 */
 
 function uppercaseAll(arrayOfStrings) {
-  // TODO: your code here
+  return map (arrayOfStrings, function(x){
+   return x.toUpperCase(x)
+  })
 }
 
 //=============================================================================
@@ -112,7 +123,10 @@ var data = [
 ];
 
 function highestPopulation(arrayOfObjects) {
-  // TODO: your code here
+
+  return filter(arrayOfObjects, function(x,i){     
+      return x.population > x[0].population ;
+  });
 }
 
 //=============================================================================
@@ -132,7 +146,9 @@ Note: please write one or two lines here describing your solution.
 */
 
 function halveAll(numbers) {
-  // your code is here
+  return map(numbers, function(x){
+    return x / 2;
+  });
 }
 
 //=============================================================================
@@ -148,7 +164,9 @@ values({first : 5, second: 'something' , third : 129}) ==> [5, 'something', 129]
 Note: please write one or two lines here describing your solution.
 */
 function values(obj) {
-  // TODO: your code here
+   return map(obj, function(x){
+    return x ;
+  });
 }
 
 //Good Luck :))
